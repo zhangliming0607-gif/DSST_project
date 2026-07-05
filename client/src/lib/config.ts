@@ -39,7 +39,7 @@ export const DEFAULT_CONFIG: ExperimentConfig = {
   mappingChangeRule: {
     enabled: true,
     changeAfterTrials: 20,
-    changeAfterSeconds: 30,
+    changeAfterSeconds: 120,
     changeType: "custom",
     customMappings: [
       { 1: "○", 2: "△", 3: "□", 4: "☆" },
@@ -56,7 +56,7 @@ export const DEFAULT_CONFIG: ExperimentConfig = {
   },
   mappingMemoryDurationMs: 10000,
   showFeedback: true,
-  showReactionTime: true,
+  showReactionTime: false,
   feedbackDurationMs: 500,
   interTrialIntervalMs: 150,
   digits: [1, 2, 3, 4],
