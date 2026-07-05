@@ -1,0 +1,27 @@
+# Project TODO
+
+- [x] Basic homepage layout
+- [x] Navigation menu (設定、ログ)
+- [x] Experiment page with DSST core logic
+- [x] Keyboard input handling (F/G/H/J keys)
+- [x] Countdown and timer
+- [x] Feedback display (correct/incorrect + RT)
+- [x] Result page with summary statistics
+- [x] Settings page (time limit, mapping change rules, conditions)
+- [x] Logs page with session history
+- [x] CSV download (all trials + summary)
+- [x] Mapping change feature (rotate/shuffle/custom)
+- [x] Add web-db-user feature for backend + database
+- [x] Create database schema for experiment sessions and trials
+- [x] Create API endpoints for saving/loading experiment data
+- [x] Update frontend to use API instead of localStorage
+- [x] Run database migrations
+- [x] Write vitest tests for API endpoints
+- [x] Change from time-limit to trial-count mode (remove timer, end after N trials)
+- [x] Add practice mode before main experiment
+- [x] Make RT display in feedback toggleable (on/off setting)
+- [x] Remove mapping preview from start screen
+- [x] Implement custom mapping change UI in settings (register multiple mapping patterns)
+- [x] Add Simple mode: show symbol, press corresponding number key (1/2/3/4)
+- [x] Add mode selection (Standard vs Simple) to start screen and settings
+- [x] Add sequential mode: Standard → Simple auto-transition within one session
