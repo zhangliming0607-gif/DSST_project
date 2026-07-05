@@ -31,11 +31,11 @@ export const DEFAULT_CONDITIONS: Condition[] = [
 
 export const DEFAULT_CONFIG: ExperimentConfig = {
   conditions: DEFAULT_CONDITIONS,
-  durationMode: "trials",
+  durationMode: "time",
   totalTrials: 60,
-  totalTimeSeconds: 90,
-  practiceTrials: 5,
-  mode: "standard",
+  totalTimeSeconds: 1200,
+  practiceTrials: 50,
+  mode: "simple",
   mappingChangeRule: {
     enabled: true,
     changeAfterTrials: 20,
@@ -54,11 +54,11 @@ export const DEFAULT_CONFIG: ExperimentConfig = {
       { 1: "☆", 2: "○", 3: "△", 4: "□" },
     ],
   },
-  mappingMemoryDurationMs: 5000,
+  mappingMemoryDurationMs: 10000,
   showFeedback: true,
   showReactionTime: true,
   feedbackDurationMs: 500,
-  interTrialIntervalMs: 200,
+  interTrialIntervalMs: 150,
   digits: [1, 2, 3, 4],
 };
 
