@@ -65,6 +65,16 @@ export default function Result() {
           timestamp: t.trialTimestamp,
         }));
 
+  // Match a trial's active mapping back to its pattern number (1-based) in the
+  // configured custom mappings, so the CSV shows the pattern directly.
+  const patterns = state.config.mappingChangeRule.customMappings || [];
+  const findPatternNumber = (map: Record<number, string>) => {
+    const idx = patterns.findIndex((p) =>
+      [1, 2, 3, 4].every((d) => p[d] === map[d])
+    );
+    return idx >= 0 ? idx + 1 : "";
+  };
+
   const handleDownloadCSV = () => {
     const headers = [
       "session_id",
@@ -78,6 +88,7 @@ export default function Result() {
       "responded_symbol",
       "is_correct",
       "reaction_time_ms",
+      "pattern_number",
       "digit_symbol_mapping",
       "timestamp",
     ];
@@ -94,6 +105,7 @@ export default function Result() {
       t.respondedSymbol,
       t.isCorrect ? 1 : 0,
       t.reactionTimeMs,
+      findPatternNumber(t.currentDigitSymbolMap),
       JSON.stringify(t.currentDigitSymbolMap),
       new Date(t.timestamp).toISOString(),
     ]);
